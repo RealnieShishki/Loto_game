@@ -4,6 +4,7 @@ import pytest
 from Gen_uniq_num import generate_unique_numbers
 from Keg import Keg
 from Card import Card
+from Game import Game
 
 # Тесты для : generate_unique_numbers
 
@@ -57,16 +58,26 @@ def test_init_keg():
 
 
 # Тест для : class Card
+class Test_card:
 
-def test_card():
-    card = Card()
-    with pytest.raises(ValueError):
-        card.cross_num(99)
+
+    def test_cross_num_error(self):
+        card = Card()
+        with pytest.raises(ValueError):
+            card.cross_num(99)
 
 
 # Тест для : class Game
 
-# Не смог написать тест для класса Гейм
+class Test_game:
+
+    def test_str(self):
+        game = Game()
+        assert game.__str__().isdigit() == False
+
+    def test_comp_card(self):
+        game = Game()
+        assert game.comp_card() == True
 
 
 

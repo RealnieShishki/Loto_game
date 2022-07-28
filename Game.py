@@ -13,18 +13,19 @@ class Game:
         self.__compcard = Card()
         self.__kegs = generate_unique_numbers(self.__numkegs, 1, 90)
 
+    def __str__(self):
+        return f"осталось {len(self.__kegs)} бочонков"
+
+    def comp_card(self):
+        return self.__usercard != self.__compcard
+
     def play_round(self) -> int:
         """
         :return:
-<<<<<<< HEAD
-        0 - game must go on
-        1 - user wins
-        2 - computer wins
-=======
         0 - игра продолжается
         1 - игрок выиграл
         2 - компьютер выиграл
->>>>>>> e885bae (Initial commit)
+
         """
 
         keg = self.__kegs.pop()
@@ -47,3 +48,4 @@ class Game:
                 return 2
 
         return 0
+
