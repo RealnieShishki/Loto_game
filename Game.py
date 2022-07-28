@@ -16,9 +16,15 @@ class Game:
     def play_round(self) -> int:
         """
         :return:
+<<<<<<< HEAD
         0 - game must go on
         1 - user wins
         2 - computer wins
+=======
+        0 - игра продолжается
+        1 - игрок выиграл
+        2 - компьютер выиграл
+>>>>>>> e885bae (Initial commit)
         """
 
         keg = self.__kegs.pop()
